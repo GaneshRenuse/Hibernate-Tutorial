@@ -186,12 +186,12 @@ logging.level.org.hibernate.type.descriptor.sql=TRACE
 
 ---
 
-## 📌 Resources & References
-
+## 📌 Resources & References.
 - [Hibernate Official Documentation](https://hibernate.org/)
 - [Spring Boot + Hibernate Guide](https://spring.io/projects/spring-boot)
 - [JPA & Hibernate Best Practices](https://vladmihalcea.com/)
 - [Hibernate GitHub Repository](https://github.com/hibernate/)
+- [Hibernate Tutorial Video by Telusko](https://youtu.be/qF20cAHKrXA?si=aM0bJPTM56Sf90ks)
 
 ---
 
