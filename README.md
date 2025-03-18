@@ -39,8 +39,8 @@ Whether you are a **beginner** or an **experienced developer**, this repository 
 
 ### 🔹 Prerequisites:
 - **Java 8+** installed
-- **Maven** or **Gradle** for dependency management
-- **MySQL/PostgreSQL** or any relational database
+- **Maven** or **Gradle** for dependency management, I used Maven fir this project.
+- **MySQL/PostgreSQL** or any relational database, I used PostgresSQL.
 
 ### 🔹 Add Hibernate Dependencies (Maven)
 
@@ -48,16 +48,8 @@ Whether you are a **beginner** or an **experienced developer**, this repository 
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-    <version>6.x.x</version>
+    <version>7.x.x</version>
 </dependency>
-```
-
-For **Gradle**, use:
-
-```gradle
-dependencies {
-    implementation 'org.hibernate:hibernate-core:6.x.x'
-}
 ```
 
 ---
@@ -66,7 +58,7 @@ dependencies {
 
 - **Session & SessionFactory**
 - **Transaction Management**
-- **Persistence Context**
+- **Jakarta Persistence Context**
 - **Configuration (XML vs Annotations)**
 
 ---
