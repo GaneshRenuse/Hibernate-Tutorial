@@ -21,7 +21,7 @@ public class Main {
 
             // Save the student
             session.persist(student);
-
+            
             // Commit the transaction
             session.getTransaction().commit();
 
