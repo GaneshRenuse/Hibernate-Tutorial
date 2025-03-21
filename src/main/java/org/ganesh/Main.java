@@ -2,33 +2,28 @@ package org.ganesh;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class Main {
     public static void main(String[] args) {
-        // Create SessionFactory
-        SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 
-        // Create Session
-        Session session = factory.getCurrentSession();
+        Alien a1 = new Alien();
+        a1.setAid(104);
+        a1.setAname("Avni");
+        a1.setTech("Databases");
 
-        try {
-            // Create Student object
-            Student student = new Student("John Doe", 22);
 
-            // Start a transaction
-            session.beginTransaction();
+        SessionFactory factory = new Configuration().addAnnotatedClass(org.ganesh.Alien.class).configure().buildSessionFactory();
+        Session session = factory.openSession();
 
-            // Save the student
-            session.persist(student);
-            
-            // Commit the transaction
-            session.getTransaction().commit();
 
-            System.out.println("Student saved successfully!");
+        Transaction transaction = session.beginTransaction();
 
-        } finally {
-            factory.close();
-        }
+        session.persist(a1);
+        transaction.commit();
+
+        session.close();
+        factory.close();
     }
 }
