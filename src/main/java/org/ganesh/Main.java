@@ -9,14 +9,12 @@ public class Main {
     public static void main(String[] args) {
 
         Alien a1 = new Alien();
-        a1.setAid(104);
-        a1.setAname("Avni");
-        a1.setTech("Databases");
-
+        a1.setAid(101);
+        a1.setAname("ganesh");
+        a1.setTech("FullStack");
 
         SessionFactory factory = new Configuration().addAnnotatedClass(org.ganesh.Alien.class).configure().buildSessionFactory();
         Session session = factory.openSession();
-
 
         Transaction transaction = session.beginTransaction();
 
